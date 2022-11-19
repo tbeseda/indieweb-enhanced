@@ -16,7 +16,7 @@ webmention-receive
 get /
 get /admin # control plane for db.. could also add env vars?
 get /notes/:entryID # note cannonical url
-get /notes/:entryID/destroy # note destroy confirmation 
+get /notes/:entryID/destroy # note destroy confirmation
 get /tags
 get /tags/:tag # display a list of posts for the given tag
 
@@ -37,7 +37,7 @@ post /webmention # https://webmention.net/draft/#receiving-webmentions
 post /micropub # https://micropub.spec.indieweb.org
 
 # catch all for 404
-any /* 
+any /*
 
 @tables
 # for internal shortlived access tokens
@@ -55,7 +55,5 @@ entries
   # type string: note, comment, repost, or like
 
 @aws
-profile personal
-region us-west-2
 architecture arm64
 runtime nodejs16.x
